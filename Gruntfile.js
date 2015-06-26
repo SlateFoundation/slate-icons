@@ -10,8 +10,9 @@ module.exports = function(grunt) {
             },
             dist: {
                 expand: true,
-                src: ['*.svg'],
-                dest: 'min/'
+                cwd: 'src/',
+                src: ['**/*.svg'],
+                dest: 'build/'
             }
         },
 
@@ -33,7 +34,7 @@ module.exports = function(grunt) {
             },
             default: {
                 files: {
-                    'slate-icons.svg': 'min/*.svg'
+                    'build/slate-icons.svg': 'build/*.svg'
                 }
             }
         }
@@ -44,4 +45,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-svgstore');
     grunt.registerTask('default', [ 'svgmin', 'svgstore' ]);
 
-}
+};

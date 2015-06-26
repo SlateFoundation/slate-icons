@@ -1,6 +1,5 @@
 <?php
 
-// \Debug::dumpVar(\Emergence_FS::getAggregateChildren('site-root/img/slate-icons'));
 $files = \Emergence_FS::getAggregateChildren('site-root/img/slate-icons');
 
 echo "<style> figure { display: inline-block; margin: 1em; text-align: center; vertical-align: top; } </style>";
